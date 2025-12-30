@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Professional Resume Builder</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/template.css" />
+</head>
+<body>
+
+<div class="app-container">
+  <!-- FORM PANEL -->
+  <div class="form-panel">
+    <h2>Create Your Resume</h2>
+
+    <input type="text" id="name" placeholder="Full Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="text" id="phone" placeholder="Phone Number" />
+
+    <label>Profile Photo</label>
+    <input type="file" id="photo" accept="image/*" />
+
+    <textarea id="education" placeholder="Education Qualification"></textarea>
+    <textarea id="experience" placeholder="Work Experience"></textarea>
+    <textarea id="hobbies" placeholder="Hobbies & Interests"></textarea>
+
+    <input type="url" id="linkedin" placeholder="LinkedIn URL" />
+    <input type="url" id="github" placeholder="GitHub URL" />
+    <input type="url" id="social" placeholder="Other Social Link" />
+
+    <button onclick="updatePreview()">Live Preview</button>
+    <button class="download" onclick="downloadResume()">Download Resume</button>
+  </div>
+
+  <!-- PREVIEW PANEL -->
+  <div class="preview-panel" id="preview">
+    <div class="resume">
+      <img id="previewPhoto" class="profile-pic" />
+      <h1 id="previewName">Your Name</h1>
+      <p id="previewEmail"></p>
+      <p id="previewPhone"></p>
+
+      <h3>Education</h3>
+      <p id="previewEducation"></p>
+
+      <h3>Experience</h3>
+      <p id="previewExperience"></p>
+
+      <h3>Hobbies</h3>
+      <p id="previewHobbies"></p>
+
+      <h3>Social Profiles</h3>
+      <p id="previewLinks"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/builder.js"></script>
+</body>
+</html>
